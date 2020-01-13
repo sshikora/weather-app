@@ -2,6 +2,7 @@ import React from 'react'
 
 class WeatherGraph extends React.Component {
   render() {
+    debugger
     return(
       <div>
         Forcast

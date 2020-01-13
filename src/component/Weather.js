@@ -16,8 +16,9 @@ class Weather extends React.Component {
     if (this.state.lat && this.state.long){
       const weather = await client.getWeather(this.state.lat, this.state.long, this.props.token)
       console.log(JSON.stringify(weather))
-      const forcast = weather.daily.data
-      this.setState({forcast:forcast})
+      debugger
+      const forecast = weather.daily.data
+      this.setState({forecast:forecast})
     }
 
   }

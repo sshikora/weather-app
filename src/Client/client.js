@@ -1,12 +1,13 @@
 async function getWeather(lat, long, token) {
 
-    const url = `https://api.darksky.net/forecast/${token}/${lat},${long}`
+    // const url = `https://api.darksky.net/forecast/${token}/${lat},${long}`
+    const url = `http://localhost:3001/forecast/${lat},${long}`
     debugger
     const response = await fetch(url, {
-      method:'GET', mode:'no-cors'
+      method:'GET'
     })
-    await checkStatus(response)
-    console.log(JSON.stringify(response))
+    // await checkStatus(response)
+    console.log(response)
     const weatherData = await parseJSON(response)
     console.log(JSON.stringify(weatherData))
     return weatherData
